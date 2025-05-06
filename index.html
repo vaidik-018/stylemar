@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StyleMart - Shoes & Clothes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">StyleMart</div>
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#connect">Connect</a>
+      <a href="#contact">Contact</a>
+      <button onclick="filterProducts('all')">All</button>
+      <button onclick="filterProducts('shoes')">Shoes</button>
+      <button onclick="filterProducts('clothes')">Clothes</button>
+      <button onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>🔥 Summer Sale is Live!</h1>
+    <p>Up to 50% off on shoes and clothing</p>
+  </section>
+
+  <!-- Product Section -->
+  <main>
+    <section class="product-section" id="products">
+      <h2>Our Products</h2>
+      <div id="product-list" class="product-grid"></div>
+    </section>
+  </main>
+  
+<!-- Connect With Us Form in the Corner -->
+<div class="connect-corner" id="connect-corner">
+    <div class="connect-header">
+      <h3><i class="fa fa-comment-dots"></i> Connect With Us</h3>
+    </div>
+    <form id="contactForm">
+      <div class="form-field">
+        <label for="name"><i class="fa fa-user"></i> Full Name</label>
+        <input type="text" id="name" placeholder="Enter your full name" required>
+      </div>
+  
+      <div class="form-field">
+        <label for="email"><i class="fa fa-envelope"></i> Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+  
+      <div class="form-field">
+        <label for="message"><i class="fa fa-comment"></i> Message</label>
+        <textarea id="message" placeholder="Write your message here" rows="5" required></textarea>
+      </div>
+  
+      <button type="submit">Send</button>
+      <p id="form-status" class="form-status"></p>
+    </form>
+  </div>
+  
+  
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-content">
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#connect">Connect</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Information</h4>
+        <p><strong>Email:</strong> support@stylemart.com</p>
+        <p><strong>Phone:</strong> +1 (800) 123-4567</p>
+        <p><strong>Address:</strong> 123 Fashion Ave, New York, NY</p>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <p>Instagram | Facebook | Twitter</p>
+      </div>
+    </div>
+    <p>&copy; 2025 StyleMart. All rights reserved.</p>
+  </footer>
+
+  <!-- Cart Modal -->
+  <div id="cart-modal" class="cart-modal">
+    <h3>Your Cart</h3>
+    <div id="cart-items"></div>
+    <p>Total: <span id="cart-total">$0.00</span></p>
+    <button onclick="toggleCart()">Close</button>
+  </div>
+
+  <!-- Toast Message -->
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
